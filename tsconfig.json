@@ -20,7 +20,9 @@
     }
   },
   "include": [
-    "./config/**/*",
-    "./src/**/*"
+    "./config/**/*.ts",
+    "./config/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
   ]
 }
