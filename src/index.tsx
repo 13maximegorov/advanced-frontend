@@ -5,6 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { PageError } from 'widgets/PageError';
 import { Suspense } from 'react';
 import App from './app/App';
+import 'app/styles/index.scss';
 
 import 'shared/config/i18n/i18n';
 
