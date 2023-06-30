@@ -1,15 +1,18 @@
 {
   "Язык": "English",
   "Страница не найдена": "Page not found",
-  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
-  "Обновить страницу": "Обновить страницу",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Refresh the page",
   "throw error": "throw error",
   "Главная": "Main",
   "О сайте": "About us",
   "Короткий язык": "En",
-  "Войти": "Войти",
+  "Войти": "Login",
   "increment": "increment",
   "decrement": "decrement",
-  "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль"
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter the password",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password",
+  "Выйти": "Logout"
 }

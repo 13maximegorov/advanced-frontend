@@ -1,7 +1,8 @@
-import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
+import { configureStore, DeepPartial, ReducersMapObject } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
 import { loginReducer } from 'features/AuthByUsername';
+import { useDispatch } from 'react-redux';
 import { StateSchema } from './StateSchema';
 
 export function createReduxStore(initialState?: StateSchema) {
@@ -17,3 +18,7 @@ export function createReduxStore(initialState?: StateSchema) {
     preloadedState: initialState,
   });
 }
+
+const store = createReduxStore();
+type AppDispatch = typeof store.dispatch
+export const useAppDispatch: () => AppDispatch = useDispatch;
