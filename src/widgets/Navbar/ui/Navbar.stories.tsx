@@ -15,14 +15,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
   decorators: [
-    StoreDecorator(),
+    StoreDecorator({}),
   ],
 };
 
 export const Dark: Story = {
   decorators: [
     ThemeDecorator(Theme.DARK),
-    StoreDecorator(),
+    StoreDecorator({}),
   ],
 };
 
