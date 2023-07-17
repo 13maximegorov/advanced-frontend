@@ -11,11 +11,11 @@ export default ({ config }: {config: Configuration}) => {
     html: '',
     src: path.resolve(__dirname, '..', '..', 'src'),
   };
-  config.resolve.modules.push(paths.src);
-  config.resolve.extensions.push('.tsx', '.ts');
+  config!.resolve!.modules!.push(paths.src);
+  config!.resolve!.extensions!.push('.tsx', '.ts');
 
   // eslint-disable-next-line no-param-reassign
-  config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+  config!.module!.rules = (config!.module!.rules as RuleSetRule[])!.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return { ...rule, exclude: /\.svg$/ };
     }
@@ -23,12 +23,13 @@ export default ({ config }: {config: Configuration}) => {
     return rule;
   });
 
-  config.module.rules.push(buildSvgLoader());
-  config.module.rules.push(buildCssLoader(true));
+  config!.module!.rules!.push(buildSvgLoader());
+  config!.module!.rules!.push(buildCssLoader(true));
 
-  config.plugins.push(
+  config!.plugins!.push(
     new DefinePlugin({
       __IS_DEV__: true,
+      __API__: JSON.stringify(''),
     }),
   );
 

@@ -10,10 +10,10 @@ import 'app/styles/index.scss';
 
 import 'shared/config/i18n/i18n';
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root')!);
 root.render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <ErrorBoundary fallback={(
         <Suspense fallback="">
           <PageError />
@@ -24,6 +24,6 @@ root.render(
           <App />
         </ThemeProvider>
       </ErrorBoundary>
-    </BrowserRouter>
-  </StoreProvider>,
+    </StoreProvider>
+  </BrowserRouter>,
 );

@@ -12,5 +12,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Maxim",
+    "lastname": "Egorov",
+    "age": 24,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Ufa",
+    "username": "admin",
+    "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png"
+  }
 }

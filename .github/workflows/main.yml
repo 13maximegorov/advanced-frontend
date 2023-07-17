@@ -35,4 +35,5 @@ jobs:
       - name: screenshot testing
         run: npm run test:ui:ci
         if: always()
+PROFILE PAGE: PROFILE PAGE
 
