@@ -10,7 +10,9 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "*": [
+        "./src/*"
+      ]
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
@@ -21,10 +23,8 @@
     }
   },
   "include": [
-    "./config/**/*.ts",
-    "./config/**/*.tsx",
+    "./config/jest/setupTests.ts",
     "./src/**/*.ts",
-    "./src/**/*.tsx",
-    "./webpack.config.ts"
+    "./src/**/*.tsx"
   ]
 }

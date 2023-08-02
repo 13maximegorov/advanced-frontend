@@ -15,7 +15,8 @@ export default ({ config }: {config: Configuration}) => {
   config!.resolve!.extensions!.push('.tsx', '.ts');
 
   // eslint-disable-next-line no-param-reassign
-  config!.module!.rules = (config!.module!.rules as RuleSetRule[])!.map((rule: RuleSetRule) => {
+  // @ts-ignore
+  config!.module!.rules = config!.module!.rules.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return { ...rule, exclude: /\.svg$/ };
     }
@@ -23,8 +24,8 @@ export default ({ config }: {config: Configuration}) => {
     return rule;
   });
 
-  config!.module!.rules!.push(buildSvgLoader());
-  config!.module!.rules!.push(buildCssLoader(true));
+  config!.module!.rules.push(buildSvgLoader());
+  config!.module!.rules.push(buildCssLoader(true));
 
   config!.plugins!.push(
     new DefinePlugin({
