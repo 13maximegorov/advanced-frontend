@@ -6,6 +6,7 @@
   "throw error": "throw error",
   "Главная": "Main",
   "О сайте": "About us",
+  "Профиль": "Profile",
   "Короткий язык": "En",
   "Войти": "Login",
   "increment": "increment",
@@ -15,5 +16,7 @@
   "Форма авторизации": "Authorization form",
   "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password",
   "Выйти": "Logout",
-  "PROFILE PAGE": "PROFILE PAGE"
+  "PROFILE PAGE": "PROFILE PAGE",
+  "Укажите валюту": "Specify the currency",
+  "Укажите страну": "Specify the country"
 }
