@@ -15,13 +15,29 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
   decorators: [
-    StoreDecorator({}),
+    StoreDecorator({
+      user: {
+        authData: {},
+      },
+    }),
   ],
 };
 
 export const Dark: Story = {
   decorators: [
-    StoreDecorator({}),
     ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+      user: {
+        authData: {},
+      },
+    }),
+  ],
+};
+
+export const NoAuth: Story = {
+  decorators: [
+    StoreDecorator({
+      user: {},
+    }),
   ],
 };
