@@ -12,6 +12,7 @@ const data = {
   country: Country.Russia,
   city: 'Ufa',
   username: 'admin',
+  id: '1',
 };
 
 describe('updateProfileData', () => {
