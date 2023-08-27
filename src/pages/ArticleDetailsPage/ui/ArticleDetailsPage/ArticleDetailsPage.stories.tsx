@@ -20,6 +20,11 @@ const article: Article = {
   img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
   views: 1022,
   createdAt: '26.02.2022',
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+  },
   type: [ArticleType.IT],
   blocks: [
     {

@@ -4,7 +4,7 @@ import { ArticleImageBlockComponent } from './ArticleImageBlockComponent';
 import { ArticleBlockType } from '../../model/types/article';
 
 const meta = {
-  title: 'entities/ArticleImageBlockComponent',
+  title: 'entities/Article/ArticleImageBlockComponent',
   component: ArticleImageBlockComponent,
 } satisfies Meta<typeof ArticleImageBlockComponent>;
 

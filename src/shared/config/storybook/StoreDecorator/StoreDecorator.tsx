@@ -4,8 +4,9 @@ import { loginReducer } from 'features/AuthByUsername';
 import { profileReducer } from 'entities/Profile';
 import { ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from 'entities/Article';
-import { addCommentFormReducer } from 'features/addCommentForm';
+import { addCommentFormReducer } from 'features/AddCommentForm';
 import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage';
+import { articlesPageReducer } from 'pages/ArticlesPage';
 
 const defaultAsyncReducers: ReducerList = {
   loginForm: loginReducer,
@@ -13,6 +14,7 @@ const defaultAsyncReducers: ReducerList = {
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducer,
   articleDetailsComments: articleDetailsCommentsReducer,
+  articlesPage: articlesPageReducer,
 };
 
 export const StoreDecorator = (
