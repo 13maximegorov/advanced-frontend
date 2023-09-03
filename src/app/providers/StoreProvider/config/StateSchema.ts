@@ -7,21 +7,23 @@ import {
 import type { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import type { ArticleDetailsSchema } from 'entities/Article';
-import type { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import type { AddCommentFormSchema } from 'features/AddCommentForm';
 import type { ArticlesPageSchema } from 'pages/ArticlesPage';
+import type { UISchema } from 'features/UI';
+import type { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
+  ui: UISchema;
 
   // Асинхронные редюсеры
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsCommentsSchema;
   addCommentForm?: AddCommentFormSchema;
-  articlesPage?: ArticlesPageSchema
+  articlesPage?: ArticlesPageSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
