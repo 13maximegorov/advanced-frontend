@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article, ArticleBlockType, ArticleType } from '../../model/types/article';
+import {
+  Article,
+  ArticleBlockType,
+  ArticleType,
+} from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
 const meta = {
@@ -22,7 +26,8 @@ const article: Article = {
   user: {
     id: '1',
     username: 'admin',
-    avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+    avatar:
+      'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
   },
   type: [ArticleType.IT],
   blocks: [

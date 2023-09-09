@@ -14,7 +14,5 @@ type Story = StoryObj<typeof meta>;
 export const Normal: Story = {
   args: {},
   argTypes: { onSendComment: {} },
-  decorators: [
-    StoreDecorator({}),
-  ],
+  decorators: [StoreDecorator({})],
 };

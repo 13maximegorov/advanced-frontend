@@ -5,9 +5,7 @@ import { profileReducer } from 'entities/Profile';
 import { ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from 'entities/Article';
 import { addCommentFormReducer } from 'features/AddCommentForm';
-import {
-  articleDetailsPageReducer,
-} from 'pages/ArticleDetailsPage';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage';
 import { articlesPageReducer } from 'pages/ArticlesPage';
 
 const defaultAsyncReducers: ReducerList = {
@@ -19,11 +17,13 @@ const defaultAsyncReducers: ReducerList = {
   articlesPage: articlesPageReducer,
 };
 
-export const StoreDecorator = (
-  state: DeepPartial<StateSchema>,
-  asyncReducers?: ReducerList,
-) => (Story: StoryFn) => (
-  <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}>
-    <Story />
-  </StoreProvider>
-);
+export const StoreDecorator =
+  (state: DeepPartial<StateSchema>, asyncReducers?: ReducerList) =>
+  (Story: StoryFn) => (
+    <StoreProvider
+      initialState={state}
+      asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
+    >
+      <Story />
+    </StoreProvider>
+  );

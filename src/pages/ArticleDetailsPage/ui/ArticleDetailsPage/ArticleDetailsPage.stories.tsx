@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import {
+  ArticleBlockType,
+  ArticleType,
+} from 'entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
@@ -23,7 +26,8 @@ const article: Article = {
   user: {
     id: '1',
     username: 'admin',
-    avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+    avatar:
+      'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
   },
   type: [ArticleType.IT],
   blocks: [

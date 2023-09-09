@@ -1,7 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import {
-  memo, MutableRefObject, ReactNode, useRef, UIEvent,
-} from 'react';
+import { memo, MutableRefObject, ReactNode, useRef, UIEvent } from 'react';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUIScrollByPath, uiActions } from 'features/UI';
@@ -18,14 +16,16 @@ interface PageProps {
   onScrollEnd?: () => void;
 }
 
+export const PAGE_ID = 'PAGE_ID';
+
 export const Page = memo((props: PageProps) => {
   const { className, children, onScrollEnd } = props;
   const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
   const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
   const { pathname } = useLocation();
-  const scrollPosition = useSelector(
-    (state: StateSchema) => getUIScrollByPath(state, pathname),
+  const scrollPosition = useSelector((state: StateSchema) =>
+    getUIScrollByPath(state, pathname),
   );
 
   useInfiniteScroll({
@@ -35,10 +35,12 @@ export const Page = memo((props: PageProps) => {
   });
 
   const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-    dispatch(uiActions.setScrollPosition({
-      path: pathname,
-      position: e.currentTarget.scrollTop,
-    }));
+    dispatch(
+      uiActions.setScrollPosition({
+        path: pathname,
+        position: e.currentTarget.scrollTop,
+      }),
+    );
   }, 500);
 
   useInitialEffect(() => {
@@ -46,13 +48,19 @@ export const Page = memo((props: PageProps) => {
   });
 
   return (
-    <section
+    <main
       ref={wrapperRef}
       className={classNames(cls.Page, {}, [className])}
       onScroll={onScroll}
+      id={PAGE_ID}
     >
       {children}
-      {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
-    </section>
+      {onScrollEnd ? (
+        <div
+          className={cls.trigger}
+          ref={triggerRef}
+        />
+      ) : null}
+    </main>
   );
 });

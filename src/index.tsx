@@ -14,11 +14,12 @@ const root = createRoot(document.getElementById('root')!);
 root.render(
   <BrowserRouter>
     <StoreProvider>
-      <ErrorBoundary fallback={(
-        <Suspense fallback="">
-          <PageError />
-        </Suspense>
-      )}
+      <ErrorBoundary
+        fallback={
+          <Suspense fallback="">
+            <PageError />
+          </Suspense>
+        }
       >
         <ThemeProvider>
           <App />

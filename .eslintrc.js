@@ -4,7 +4,12 @@ module.exports = {
     es2022: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'plugin:i18next/recommended',
+    'prettier',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -13,7 +18,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'check-path',
+    'prettier',
+  ],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [
@@ -37,7 +49,6 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to', 'target'],
       },
     ],
-    'max-len': ['error', { ignoreComments: true, code: 130 }],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react-hooks/rules-of-hooks': 'error',
@@ -46,6 +57,8 @@ module.exports = {
     'react/jsx-no-useless-fragment': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'check-path/check-path': 'error',
+    'prettier/prettier': ['error'],
   },
   globals: {
     __IS_DEV__: true,

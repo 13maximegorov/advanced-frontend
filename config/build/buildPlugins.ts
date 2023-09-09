@@ -12,7 +12,10 @@ import CopyPlugin from 'copy-webpack-plugin';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({
-  paths, isDev, apiUrl, project,
+  paths,
+  isDev,
+  apiUrl,
+  project,
 }: BuildOptions): WebpackPluginInstance[] {
   const plugins = [
     new HtmlWebpackPlugin({
@@ -41,9 +44,11 @@ export function buildPlugins({
   if (isDev) {
     plugins.push(new ReactRefreshPlugin());
     plugins.push(new HotModuleReplacementPlugin());
-    plugins.push(new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }));
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      }),
+    );
   }
 
   return plugins;

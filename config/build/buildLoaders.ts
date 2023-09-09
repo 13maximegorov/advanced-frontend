@@ -5,9 +5,7 @@ import { buildSvgLoader } from './loaders/buildSvgLoader';
 import { buildBabelLoader } from './loaders/buildBabelLoader';
 
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
-  const {
-    isDev,
-  } = options;
+  const { isDev } = options;
 
   const svgLoader = buildSvgLoader();
 
@@ -30,11 +28,5 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     ],
   };
 
-  return [
-    fileLoader,
-    svgLoader,
-    babelLoader,
-    typescriptLoader,
-    cssLoader,
-  ];
+  return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader];
 }

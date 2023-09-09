@@ -15,7 +15,5 @@ export const Normal: Story = {
   args: {
     children: 'children',
   },
-  decorators: [
-    StoreDecorator({}),
-  ],
+  decorators: [StoreDecorator({})],
 };

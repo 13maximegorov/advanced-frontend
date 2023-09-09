@@ -2,7 +2,11 @@ import { CounterSchema } from 'entities/Counter';
 import type { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import {
-  AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
+  AnyAction,
+  CombinedState,
+  EnhancedStore,
+  Reducer,
+  ReducersMapObject,
 } from '@reduxjs/toolkit';
 import type { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';

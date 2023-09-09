@@ -7,21 +7,19 @@ import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
 export interface componentRenderOptions {
   route?: string;
-  initialState?: DeepPartial<StateSchema>
+  initialState?: DeepPartial<StateSchema>;
 }
 
-export const componentRender = (component: ReactNode, options: componentRenderOptions = {}) => {
-  const {
-    route = '/',
-    initialState,
-  } = options;
+export const componentRender = (
+  component: ReactNode,
+  options: componentRenderOptions = {},
+) => {
+  const { route = '/', initialState } = options;
 
   return render(
     <MemoryRouter initialEntries={[route]}>
       <StoreProvider initialState={initialState}>
-        <I18nextProvider i18n={i18nForTests}>
-          {component}
-        </I18nextProvider>
+        <I18nextProvider i18n={i18nForTests}>{component}</I18nextProvider>
       </StoreProvider>
     </MemoryRouter>,
   );

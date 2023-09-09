@@ -5,9 +5,19 @@ import { Input } from 'shared/ui/Input/Input';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice';
-import { getCommentFormError, getCommentFormText } from '../../model/selectors/addCommentFormSelectors';
+import {
+  DynamicModuleLoader,
+  ReducerList,
+} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { HStack } from 'shared/ui/Stack';
+import {
+  addCommentFormActions,
+  addCommentFormReducer,
+} from '../../model/slice/addCommentFormSlice';
+import {
+  getCommentFormError,
+  getCommentFormText,
+} from '../../model/selectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
@@ -26,9 +36,12 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
   const error = useSelector(getCommentFormError);
   const dispatch = useAppDispatch();
 
-  const onCommentTextChange = useCallback((value: string) => {
-    dispatch(addCommentFormActions.setText(value));
-  }, [dispatch]);
+  const onCommentTextChange = useCallback(
+    (value: string) => {
+      dispatch(addCommentFormActions.setText(value));
+    },
+    [dispatch],
+  );
 
   const onSendHandler = useCallback(() => {
     onSendComment(text || '');
@@ -37,7 +50,11 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack
+        justify="between"
+        max
+        className={classNames(cls.AddCommentForm, {}, [className])}
+      >
         <Input
           className={cls.input}
           placeholder={t('Введите текст комментария')}
@@ -50,7 +67,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
         >
           {t('Отправить')}
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   );
 });

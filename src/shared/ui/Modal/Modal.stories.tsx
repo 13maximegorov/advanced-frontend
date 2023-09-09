@@ -15,16 +15,16 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     isOpen: true,
-    children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, numquam.',
+    children:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, numquam.',
   },
 };
 
 export const Dark: Story = {
   args: {
     isOpen: true,
-    children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, numquam.',
+    children:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, numquam.',
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };

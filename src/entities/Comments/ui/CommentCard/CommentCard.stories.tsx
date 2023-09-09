@@ -18,7 +18,8 @@ export const Normal: Story = {
       user: {
         id: '1',
         username: 'admin',
-        avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+        avatar:
+          'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
       },
     },
   },
@@ -32,7 +33,8 @@ export const Loading: Story = {
       user: {
         id: '1',
         username: 'admin',
-        avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+        avatar:
+          'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
       },
     },
     isLoading: true,

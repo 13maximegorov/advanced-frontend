@@ -6,7 +6,11 @@ interface UseInfiniteScrollOptions {
   wrapperRef: MutableRefObject<HTMLDivElement>;
 }
 
-export function useInfiniteScroll({ callback, triggerRef, wrapperRef }: UseInfiniteScrollOptions) {
+export function useInfiniteScroll({
+  callback,
+  triggerRef,
+  wrapperRef,
+}: UseInfiniteScrollOptions) {
   useEffect(() => {
     let observer: IntersectionObserver | null = null;
     const wrapperElement = wrapperRef.current;

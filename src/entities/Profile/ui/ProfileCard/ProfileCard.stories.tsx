@@ -22,7 +22,8 @@ export const Primary: Story = {
       country: Country.Russia,
       city: 'Ufa',
       username: 'admin',
-      avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+      avatar:
+        'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
     },
   },
 };

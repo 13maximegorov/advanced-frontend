@@ -44,27 +44,21 @@ export const PrimaryDark: Story = {
     title: 'Title',
     text: 'Description',
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const onlyTitleDark: Story = {
   args: {
     title: 'Title',
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const onlyTextDark: Story = {
   args: {
     text: 'Description',
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const SizeL: Story = {
@@ -72,5 +66,21 @@ export const SizeL: Story = {
     title: 'Title',
     text: 'Description',
     size: TextSize.L,
+  },
+};
+
+export const SizeM: Story = {
+  args: {
+    title: 'Title',
+    text: 'Description',
+    size: TextSize.M,
+  },
+};
+
+export const SizeS: Story = {
+  args: {
+    title: 'Title',
+    text: 'Description',
+    size: TextSize.S,
   },
 };

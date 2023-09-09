@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import {
-  ArticleBlockType, ArticleType, Article, ArticleView,
+  ArticleBlockType,
+  ArticleType,
+  Article,
+  ArticleView,
 } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
 
@@ -23,7 +26,8 @@ const article: Article = {
   user: {
     id: '1',
     username: 'admin',
-    avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+    avatar:
+      'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
   },
   type: [ArticleType.IT, ArticleType.SCIENCE, ArticleType.ECONOMICS],
   blocks: [

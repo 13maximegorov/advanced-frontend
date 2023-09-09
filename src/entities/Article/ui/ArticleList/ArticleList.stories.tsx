@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import {
-  ArticleBlockType, ArticleType, Article, ArticleView,
+  ArticleBlockType,
+  ArticleType,
+  Article,
+  ArticleView,
 } from '../../model/types/article';
 import { ArticleList } from './ArticleList';
 
@@ -23,7 +26,8 @@ const article: Article = {
   user: {
     id: '1',
     username: 'admin',
-    avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
+    avatar:
+      'https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png',
   },
   type: [ArticleType.IT, ArticleType.SCIENCE, ArticleType.ECONOMICS],
   blocks: [
@@ -106,24 +110,20 @@ export const LoadingSmall: Story = {
 
 export const ListBig: Story = {
   args: {
-    articles: new Array(9)
-      .fill(0)
-      .map((item, index) => ({
-        ...article,
-        id: String(index),
-      })),
+    articles: new Array(9).fill(0).map((item, index) => ({
+      ...article,
+      id: String(index),
+    })),
     view: ArticleView.BIG,
   },
 };
 
 export const ListSmall: Story = {
   args: {
-    articles: new Array(9)
-      .fill(0)
-      .map((item, index) => ({
-        ...article,
-        id: String(index),
-      })),
+    articles: new Array(9).fill(0).map((item, index) => ({
+      ...article,
+      id: String(index),
+    })),
     view: ArticleView.SMALL,
   },
 };
