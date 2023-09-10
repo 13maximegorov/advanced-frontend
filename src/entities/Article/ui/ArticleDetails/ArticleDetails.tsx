@@ -29,7 +29,7 @@ import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 
 interface ArticleDetailsProps {
   className?: string;
-  id: string;
+  id?: string;
 }
 
 const reducers: ReducerList = {
@@ -172,6 +172,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     <DynamicModuleLoader reducers={reducers}>
       <VStack
         gap="16"
+        max
         className={classNames(cls.ArticleDetails, {}, [className])}
       >
         {content}
