@@ -4,7 +4,7 @@ import { Page } from 'widgets/Page/Page';
 const AdminPanelPage = () => {
   const { t } = useTranslation();
 
-  return <Page>dfsa</Page>;
+  return <Page>{t('Админка')}</Page>;
 };
 
 export default AdminPanelPage;

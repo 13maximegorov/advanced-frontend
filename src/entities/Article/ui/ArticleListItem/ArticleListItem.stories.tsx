@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { Article } from '../../model/types/article';
 import {
   ArticleBlockType,
   ArticleType,
-  Article,
   ArticleView,
-} from '../../model/types/article';
+} from '../../model/consts/articleConsts';
 import { ArticleListItem } from './ArticleListItem';
 
 const meta = {
