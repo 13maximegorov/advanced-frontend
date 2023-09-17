@@ -4,11 +4,11 @@ import {
   Reducer,
   ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { userReducer } from 'entities/User';
-import { createReducerManager } from 'app/providers/StoreProvider/config/reducerManager';
-import { $api } from 'shared/api/api';
-import { uiReducer } from 'features/UI';
-import { rtkApi } from 'shared/api/rtkApi';
+import { userReducer } from '@/entities/User';
+import { createReducerManager } from '@/app/providers/StoreProvider/config/reducerManager';
+import { $api } from '@/shared/api/api';
+import { uiReducer } from '@/features/UI';
+import { rtkApi } from '@/shared/api/rtkApi';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
 export function createReduxStore(
